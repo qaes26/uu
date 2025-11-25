@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>بنك أسئلة - أساسيات نظم المعلومات الإدارية (فصل 1 و 2)</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Tahoma", "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e5e7eb;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border: 1px solid #334155;
+    }
+    h1, h2 {
+      text-align: center;
+      margin: 10px 0;
+    }
+    h1 {
+      font-size: 26px;
+    }
+    h2 {
+      font-size: 18px;
+      color: #cbd5f5;
+    }
+    .student {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #fbbf24;
+      font-weight: bold;
+    }
+    .note {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    .question {
+      background: #020617;
+      border-radius: 14px;
+      padding: 15px 15px 10px;
+      margin-bottom: 12px;
+      border: 1px solid #1f2937;
+    }
+    .question h3 {
+      margin: 0 0 10px;
+      font-size: 15px;
+      color: #e5e7eb;
+    }
+    .options {
+      display: grid;
+      gap: 6px;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    input[type="radio"] {
+      accent-color: #38bdf8;
+      cursor: pointer;
+    }
+    .actions {
+      text-align: center;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: #38bdf8;
+      color: #020617;
+      font-weight: bold;
+      box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+    }
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 24px rgba(56, 189, 248, 0.4);
+      background: #0ea5e9;
+    }
+    button:active {
+      transform: translateY(1px);
+      box-shadow: 0 6px 12px rgba(56, 189, 248, 0.25);
+    }
+    .result {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .correct {
+      border-color: #22c55e !important;
+    }
+    .wrong {
+      border-color: #ef4444 !important;
+    }
+    .footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+    }
+    @media (max-width: 700px) {
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>بنك أسئلة - أساسيات نظم المعلومات الإدارية</h1>
+    <h2>الفصل الأول والثاني (اختبار ضع دائرة)</h2>
+    <div class="student">إعداد الطالب : قيس طلال لجازي</div>
+    <div class="note">اختر الإجابة الصحيحة لكل سؤال، ثم اضغط زر "تصحيح الإجابات" في الأسفل.</div>
+
+    <!-- الفصل الأول -->
+
+    <div class="question">
+      <h3>1- النظام (System) هو:</h3>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a"> أ) جهاز حاسوب واحد.</label>
+        <label><input type="radio" name="q1" value="b"> ب) مجموعة من العناصر المترابطة تعمل معاً لتحقيق هدف محدد.</label>
+        <label><input type="radio" name="q1" value="c"> ج) مجموعة من البرامج الجاهزة فقط.</label>
+        <label><input type="radio" name="q1" value="d"> د) قاعدة بيانات بدون مستخدمين.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>2- من العناصر المشتركة بين جميع الأنظمة:</h3>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a"> أ) العشوائية والصدفة.</label>
+        <label><input type="radio" name="q2" value="b"> ب) المدخلات والمخرجات.</label>
+        <label><input type="radio" name="q2" value="c"> ج) الأجهزة والبرمجيات.</label>
+        <label><input type="radio" name="q2" value="d"> د) الربح والخسارة.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>3- حدود النظام (System Boundary) تعني:</h3>
+      <div class="options">
+        <label><input type="radio" name="q3" value="a"> أ) جميع القوانين التي تحكم عمل المنظمة.</label>
+        <label><input type="radio" name="q3" value="b"> ب) الخط الفاصل بين النظام وبيئته الخارجية.</label>
+        <label><input type="radio" name="q3" value="c"> ج) أهداف النظام طويلة الأجل.</label>
+        <label><input type="radio" name="q3" value="d"> د) المخرجات النهائية للنظام.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>4- النظام المفتوح يختلف عن النظام المغلق بأنه:</h3>
+      <div class="options">
+        <label><input type="radio" name="q4" value="a"> أ) لا يتأثر بالبيئة الخارجية.</label>
+        <label><input type="radio" name="q4" value="b"> ب) يتفاعل مع البيئة الخارجية ويتأثر بها.</label>
+        <label><input type="radio" name="q4" value="c"> ج) لا يحتوي على مخرجات.</label>
+        <label><input type="radio" name="q4" value="d"> د) لا يحتوي على مدخلات.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>5- أي مما يلي يمثل نظاماً من صنع الإنسان؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q5" value="a"> أ) المجموعة الشمسية.</label>
+        <label><input type="radio" name="q5" value="b"> ب) جهاز الحاسوب في الشركة.</label>
+        <label><input type="radio" name="q5" value="c"> ج) دورة الماء في الطبيعة.</label>
+        <label><input type="radio" name="q5" value="d"> د) المناخ العالمي.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>6- نظام الحاسوب يتكوّن بشكل رئيسي من:</h3>
+      <div class="options">
+        <label><input type="radio" name="q6" value="a"> أ) البيانات والإنترنت فقط.</label>
+        <label><input type="radio" name="q6" value="b"> ب) الأجهزة والبرمجيات.</label>
+        <label><input type="radio" name="q6" value="c"> ج) السياسات والقوانين.</label>
+        <label><input type="radio" name="q6" value="d"> د) العملاء والموردين.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>7- القيود (Constraints) في تصميم النظام تتمثل في:</h3>
+      <div class="options">
+        <label><input type="radio" name="q7" value="a"> أ) الوقت والمال والعاملين المتاحين.</label>
+        <label><input type="radio" name="q7" value="b"> ب) المخرجات فقط.</label>
+        <label><input type="radio" name="q7" value="c"> ج) نوع الحاسوب فقط.</label>
+        <label><input type="radio" name="q7" value="d"> د) نوع قاعدة البيانات فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>8- تكنولوجيا المعلومات (IT) تعني:</h3>
+      <div class="options">
+        <label><input type="radio" name="q8" value="a"> أ) الأجهزة فقط.</label>
+        <label><input type="radio" name="q8" value="b"> ب) البرمجيات فقط.</label>
+        <label><input type="radio" name="q8" value="c"> ج) استخدام الحاسوب وتقنياته لمعالجة وتخزين ونقل المعلومات.</label>
+        <label><input type="radio" name="q8" value="d"> د) شبكة الإنترنت فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>9- نظام المعلومات (Information System) يهدف أساساً إلى:</h3>
+      <div class="options">
+        <label><input type="radio" name="q9" value="a"> أ) زيادة عدد الموظفين.</label>
+        <label><input type="radio" name="q9" value="b"> ب) جمع ومعالجة وتخزين وتوزيع المعلومات لدعم أنشطة المنظمة.</label>
+        <label><input type="radio" name="q9" value="c"> ج) إلغاء دور الإدارة.</label>
+        <label><input type="radio" name="q9" value="d"> د) تقليل عدد الحواسيب.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>10- البيانات (Data) تختلف عن المعلومات (Information) بأنها:</h3>
+      <div class="options">
+        <label><input type="radio" name="q10" value="a"> أ) منظمة وذات معنى واضح.</label>
+        <label><input type="radio" name="q10" value="b"> ب) خام وغير معالجة بعد.</label>
+        <label><input type="radio" name="q10" value="c"> ج) تُستخدم فقط من قبل الإدارة العليا.</label>
+        <label><input type="radio" name="q10" value="d"> د) لا يمكن تخزينها في الحاسوب.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>11- أي مما يلي يُعد من عمليات معالجة البيانات؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q11" value="a"> أ) إدخال البيانات فقط.</label>
+        <label><input type="radio" name="q11" value="b"> ب) التخزين فقط.</label>
+        <label><input type="radio" name="q11" value="c"> ج) الفرز والتلخيص والحساب.</label>
+        <label><input type="radio" name="q11" value="d"> د) طباعة الأوراق فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>12- من وظائف نظام المعلومات في المنظمة:</h3>
+      <div class="options">
+        <label><input type="radio" name="q12" value="a"> أ) تعطيل الاتصال بين المديرين.</label>
+        <label><input type="radio" name="q12" value="b"> ب) توفير معلومات دقيقة وفي الوقت المناسب.</label>
+        <label><input type="radio" name="q12" value="c"> ج) زيادة العمل الورقي.</label>
+        <label><input type="radio" name="q12" value="d"> د) إخفاء المعلومات عن متخذي القرار.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>13- من أهم أدوار نظم المعلومات في اتخاذ القرار:</h3>
+      <div class="options">
+        <label><input type="radio" name="q13" value="a"> أ) استبدال المدير نهائياً.</label>
+        <label><input type="radio" name="q13" value="b"> ب) دعم القرار بمعلومات وتحليلات مناسبة.</label>
+        <label><input type="radio" name="q13" value="c"> ج) منع القرارات الجديدة.</label>
+        <label><input type="radio" name="q13" value="d"> د) خفض دقة القرار.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>14- من الفوائد الاستراتيجية لنظم المعلومات:</h3>
+      <div class="options">
+        <label><input type="radio" name="q14" value="a"> أ) زيادة الاعتماد على العمل اليدوي.</label>
+        <label><input type="radio" name="q14" value="b"> ب) دعم الميزة التنافسية للمنظمة.</label>
+        <label><input type="radio" name="q14" value="c"> ج) عزل المنظمة عن السوق.</label>
+        <label><input type="radio" name="q14" value="d"> د) إبطاء عملية اتخاذ القرار.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>15- الميزة التنافسية (Competitive Advantage) هي:</h3>
+      <div class="options">
+        <label><input type="radio" name="q15" value="a"> أ) ضعف أداء المنظمة مقارنة بالمنافسين.</label>
+        <label><input type="radio" name="q15" value="b"> ب) قدرة المنظمة على تحقيق أداء أفضل من منافسيها.</label>
+        <label><input type="radio" name="q15" value="c"> ج) انخفاض جودة المنتجات.</label>
+        <label><input type="radio" name="q15" value="d"> د) تقليل رضا العملاء.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>16- دورة حياة النظام (SLC) تشير إلى:</h3>
+      <div class="options">
+        <label><input type="radio" name="q16" value="a"> أ) عمر الحاسوب المادي.</label>
+        <label><input type="radio" name="q16" value="b"> ب) المراحل التي يمر بها النظام من الفكرة حتى الإلغاء.</label>
+        <label><input type="radio" name="q16" value="c"> ج) دورة حياة المنتج فقط.</label>
+        <label><input type="radio" name="q16" value="d"> د) دورة حياة الموظف في الشركة.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>17- من مراحل دورة حياة النظام:</h3>
+      <div class="options">
+        <label><input type="radio" name="q17" value="a"> أ) التخطيط، التحليل، التصميم، التنفيذ، الصيانة.</label>
+        <label><input type="radio" name="q17" value="b"> ب) التخطيط فقط.</label>
+        <label><input type="radio" name="q17" value="c"> ج) التنفيذ فقط.</label>
+        <label><input type="radio" name="q17" value="d"> د) الصيانة فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>18- مرحلة التحليل في دورة حياة النظام تهتم بـ:</h3>
+      <div class="options">
+        <label><input type="radio" name="q18" value="a"> أ) اختيار لون الشاشات.</label>
+        <label><input type="radio" name="q18" value="b"> ب) دراسة الوضع الحالي وتحديد متطلبات المستخدمين.</label>
+        <label><input type="radio" name="q18" value="c"> ج) تركيب الأجهزة فقط.</label>
+        <label><input type="radio" name="q18" value="d"> د) تدريب المستخدمين فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>19- مرحلة اختبار النظام تهدف إلى:</h3>
+      <div class="options">
+        <label><input type="radio" name="q19" value="a"> أ) زيادة عدد الأخطاء في النظام.</label>
+        <label><input type="radio" name="q19" value="b"> ب) التأكد من عمل النظام كما هو مخطط واكتشاف الأخطاء.</label>
+        <label><input type="radio" name="q19" value="c"> ج) تغيير أهداف النظام.</label>
+        <label><input type="radio" name="q19" value="d"> د) تقليل التدريب.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>20- البرمجيات الجاهزة (Application Package) هي:</h3>
+      <div class="options">
+        <label><input type="radio" name="q20" value="a"> أ) برنامج يتم تطويره خصيصاً لمنظمة واحدة.</label>
+        <label><input type="radio" name="q20" value="b"> ب) برنامج عام يطوَّر ويباع للاستخدام من قبل منظمات عديدة.</label>
+        <label><input type="radio" name="q20" value="c"> ج) نظام تشغيل فقط.</label>
+        <label><input type="radio" name="q20" value="d"> د) برنامج مجاني بلا حقوق.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>21- من مزايا شراء حزمة برمجية جاهزة:</h3>
+      <div class="options">
+        <label><input type="radio" name="q21" value="a"> أ) وقت أقل للتنفيذ وتكلفة أقل غالباً.</label>
+        <label><input type="radio" name="q21" value="b"> ب) لا تحتاج إلى تدريب المستخدمين.</label>
+        <label><input type="radio" name="q21" value="c"> ج) يمكن تغييرها بالكامل دون تكلفة.</label>
+        <label><input type="radio" name="q21" value="d"> د) تغني عن الأجهزة.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>22- من مخاطر الاعتماد الكامل على مورّد خارجي للبرمجيات:</h3>
+      <div class="options">
+        <label><input type="radio" name="q22" value="a"> أ) زيادة استقلالية المنظمة.</label>
+        <label><input type="radio" name="q22" value="b"> ب) الاعتماد على المورّد في التحديث والدعم.</label>
+        <label><input type="radio" name="q22" value="c"> ج) اختفاء الحاجة إلى الصيانة.</label>
+        <label><input type="radio" name="q22" value="d"> د) عدم الحاجة إلى أمن معلومات.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>23- العبارة: "البيانات والمعلومات مصطلحان مترادفان تماماً" هي:</h3>
+      <div class="options">
+        <label><input type="radio" name="q23" value="a"> أ) صحيحة.</label>
+        <label><input type="radio" name="q23" value="b"> ب) خاطئة؛ لأن البيانات خام بينما المعلومات بيانات تمت معالجتها.</label>
+        <label><input type="radio" name="q23" value="c"> ج) صحيحة في النظم اليدوية فقط.</label>
+        <label><input type="radio" name="q23" value="d"> د) صحيحة في النظم المحوسبة فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>24- أي مما يلي ليس من مكونات نظام المعلومات؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q24" value="a"> أ) الأجهزة.</label>
+        <label><input type="radio" name="q24" value="b"> ب) البرمجيات.</label>
+        <label><input type="radio" name="q24" value="c"> ج) البيانات.</label>
+        <label><input type="radio" name="q24" value="d"> د) المنافسون في السوق.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>25- العبارة الأنسب: "وجود حاسوب قوي في المنظمة يعني أنها تملك نظام معلومات فعّال":</h3>
+      <div class="options">
+        <label><input type="radio" name="q25" value="a"> أ) صحيحة دائماً.</label>
+        <label><input type="radio" name="q25" value="b"> ب) خاطئة؛ لأن نظام المعلومات يتكوّن من عناصر أخرى غير الأجهزة.</label>
+        <label><input type="radio" name="q25" value="c"> ج) صحيحة إذا كان الحاسوب حديثاً.</label>
+        <label><input type="radio" name="q25" value="d"> د) صحيحة فقط في الشركات الصغيرة.</label>
+      </div>
+    </div>
+
+    <!-- الفصل الثاني -->
+
+    <div class="question">
+      <h3>26- نظام المعلومات الإدارية (MIS) هو نظام يهدف إلى:</h3>
+      <div class="options">
+        <label><input type="radio" name="q26" value="a"> أ) تشغيل الآلات فقط.</label>
+        <label><input type="radio" name="q26" value="b"> ب) توفير معلومات للإدارة لدعم التخطيط والرقابة واتخاذ القرار.</label>
+        <label><input type="radio" name="q26" value="c"> ج) استبدال العاملين.</label>
+        <label><input type="radio" name="q26" value="d"> د) زيادة العمل الورقي.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>27- الفرق بين نظام المعلومات العام ونظام المعلومات الإدارية أن الأخير:</h3>
+      <div class="options">
+        <label><input type="radio" name="q27" value="a"> أ) يركّز على خدمة الإدارة ومتخذي القرار.</label>
+        <label><input type="radio" name="q27" value="b"> ب) لا يتعامل مع البيانات.</label>
+        <label><input type="radio" name="q27" value="c"> ج) لا يستخدم الحاسوب.</label>
+        <label><input type="radio" name="q27" value="d"> د) مخصص للعملاء فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>28- نظم المعلومات الإدارية ترتبط بالإدارات الوظيفية مثل:</h3>
+      <div class="options">
+        <label><input type="radio" name="q28" value="a"> أ) المالية والتسويق والموارد البشرية والإنتاج.</label>
+        <label><input type="radio" name="q28" value="b"> ب) الإدارة فقط دون الأقسام الأخرى.</label>
+        <label><input type="radio" name="q28" value="c"> ج) قسم الأمن فقط.</label>
+        <label><input type="radio" name="q28" value="d"> د) لا ترتبط بأي إدارة.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>29- مكوّنات نظام المعلومات الإدارية الأساسية هي:</h3>
+      <div class="options">
+        <label><input type="radio" name="q29" value="a"> أ) مدخلات، عمليات، مخرجات، تغذية راجعة.</label>
+        <label><input type="radio" name="q29" value="b"> ب) مدخلات فقط.</label>
+        <label><input type="radio" name="q29" value="c"> ج) مخرجات فقط.</label>
+        <label><input type="radio" name="q29" value="d"> د) عمليات فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>30- نظم المعلومات المحاسبية/المالية تختص بـ:</h3>
+      <div class="options">
+        <label><input type="radio" name="q30" value="a"> أ) إدارة الموارد البشرية.</label>
+        <label><input type="radio" name="q30" value="b"> ب) تسجيل وتحليل العمليات المالية وإعداد التقارير.</label>
+        <label><input type="radio" name="q30" value="c"> ج) إدارة المخزون فقط.</label>
+        <label><input type="radio" name="q30" value="d"> د) الإعلان والترويج.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>31- من أمثلة التقارير التي تنتجها نظم المعلومات المالية:</h3>
+      <div class="options">
+        <label><input type="radio" name="q31" value="a"> أ) تقرير الراتب الوظيفي للمدير فقط.</label>
+        <label><input type="radio" name="q31" value="b"> ب) قائمة الدخل والميزانية العمومية.</label>
+        <label><input type="radio" name="q31" value="c"> ج) تقرير عن حركة الزوار في الموقع الإلكتروني.</label>
+        <label><input type="radio" name="q31" value="d"> د) تقرير عن رضا الموظفين فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>32- نظم المعلومات التسويقية تساعد على:</h3>
+      <div class="options">
+        <label><input type="radio" name="q32" value="a"> أ) دراسة السوق وسلوك المستهلك.</label>
+        <label><input type="radio" name="q32" value="b"> ب) تصميم الدوائر الإلكترونية.</label>
+        <label><input type="radio" name="q32" value="c"> ج) إدارة خطوط الإنتاج.</label>
+        <label><input type="radio" name="q32" value="d"> د) إدارة المرافق الصحية.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>33- من تطبيقات نظم معلومات الإنتاج والعمليات:</h3>
+      <div class="options">
+        <label><input type="radio" name="q33" value="a"> أ) متابعة المخزون وجدولة الإنتاج.</label>
+        <label><input type="radio" name="q33" value="b"> ب) حساب الرواتب فقط.</label>
+        <label><input type="radio" name="q33" value="c"> ج) إعداد الميزانية العامة للدولة.</label>
+        <label><input type="radio" name="q33" value="d"> د) مراقبة الفصول الدراسية.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>34- نظم معلومات الموارد البشرية تهتم بـ:</h3>
+      <div class="options">
+        <label><input type="radio" name="q34" value="a"> أ) التوظيف وتقييم الأداء وتدريب الموظفين.</label>
+        <label><input type="radio" name="q34" value="b"> ب) إدارة حسابات الزبائن فقط.</label>
+        <label><input type="radio" name="q34" value="c"> ج) الرقابة على جودة المنتج فقط.</label>
+        <label><input type="radio" name="q34" value="d"> د) الإعلان التلفزيوني.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>35- نظام دعم القرار (DSS) يتميز بأنه:</h3>
+      <div class="options">
+        <label><input type="radio" name="q35" value="a"> أ) يقدّم فقط تقارير دورية ثابتة.</label>
+        <label><input type="radio" name="q35" value="b"> ب) يساعد في تحليل البيانات واتخاذ قرارات شبه مهيكلة.</label>
+        <label><input type="radio" name="q35" value="c"> ج) لا يستخدم النماذج الرياضية أبداً.</label>
+        <label><input type="radio" name="q35" value="d"> د) يستخدم في القرارات الروتينية فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>36- نظم المعلومات التنفيذية (EIS) تُوجَّه عادة إلى:</h3>
+      <div class="options">
+        <label><input type="radio" name="q36" value="a"> أ) الموظفين في المستوى التشغيلي.</label>
+        <label><input type="radio" name="q36" value="b"> ب) الإدارة العليا وكبار المديرين.</label>
+        <label><input type="radio" name="q36" value="c"> ج) العملاء الخارجيين فقط.</label>
+        <label><input type="radio" name="q36" value="d"> د) موردي المواد الخام.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>37- نظام المعلومات الإدارية (MIS) يدعم غالباً:</h3>
+      <div class="options">
+        <label><input type="radio" name="q37" value="a"> أ) القرارات غير المهيكلة فقط.</label>
+        <label><input type="radio" name="q37" value="b"> ب) القرارات الروتينية والمهيكلة.</label>
+        <label><input type="radio" name="q37" value="c"> ج) القرارات الفلسفية.</label>
+        <label><input type="radio" name="q37" value="d"> د) القرارات الشخصية فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>38- من أدوار نظام المعلومات الإدارية في التخطيط:</h3>
+      <div class="options">
+        <label><input type="radio" name="q38" value="a"> أ) منع جمع البيانات.</label>
+        <label><input type="radio" name="q38" value="b"> ب) توفير بيانات تاريخية وتقديرية تساعد في وضع الخطط.</label>
+        <label><input type="radio" name="q38" value="c"> ج) تقليل دقة الخطة.</label>
+        <label><input type="radio" name="q38" value="d"> د) إلغاء مرحلة التخطيط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>39- من مزايا تكامل نظم المعلومات بين الإدارات المختلفة:</h3>
+      <div class="options">
+        <label><input type="radio" name="q39" value="a"> أ) تكرار البيانات وتضاربها.</label>
+        <label><input type="radio" name="q39" value="b"> ب) تسهيل تبادل المعلومات وتقليل الازدواجية.</label>
+        <label><input type="radio" name="q39" value="c"> ج) زيادة العمل الورقي.</label>
+        <label><input type="radio" name="q39" value="d"> د) إطالة زمن معالجة العمليات.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>40- يمكن لنظام المعلومات الإدارية تحسين خدمة العملاء من خلال:</h3>
+      <div class="options">
+        <label><input type="radio" name="q40" value="a"> أ) تأخير الرد على استفساراتهم.</label>
+        <label><input type="radio" name="q40" value="b"> ب) توفير معلومات دقيقة وسريعة عن الطلبات والشكاوى.</label>
+        <label><input type="radio" name="q40" value="c"> ج) إخفاء بياناتهم.</label>
+        <label><input type="radio" name="q40" value="d"> د) إلغاء التواصل معهم.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>41- تقارير الاستثناء (Exception Reports) تعني:</h3>
+      <div class="options">
+        <label><input type="radio" name="q41" value="a"> أ) التقارير التي تعرض جميع البيانات بالتفصيل.</label>
+        <label><input type="radio" name="q41" value="b"> ب) التقارير التي تُظهر فقط الحالات التي تخرج عن الحدود أو المعايير المحددة.</label>
+        <label><input type="radio" name="q41" value="c"> ج) التقارير اليومية الروتينية.</label>
+        <label><input type="radio" name="q41" value="d"> د) التقارير الموجهة للعملاء.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>42- العبارة: "نظم المعلومات الإدارية تهتم فقط بالبيانات التاريخية ولا تُستخدم في التنبؤ" هي:</h3>
+      <div class="options">
+        <label><input type="radio" name="q42" value="a"> أ) صحيحة دائماً.</label>
+        <label><input type="radio" name="q42" value="b"> ب) خاطئة؛ لأنها يمكن أن تُستخدم أيضاً في التنبؤ بالمستقبل.</label>
+        <label><input type="radio" name="q42" value="c"> ج) صحيحة في الشركات الصغيرة فقط.</label>
+        <label><input type="radio" name="q42" value="d"> د) صحيحة في القطاع الحكومي فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>43- من حيث الزمن، يمكن أن تكون تقارير نظام المعلومات الإدارية:</h3>
+      <div class="options">
+        <label><input type="radio" name="q43" value="a"> أ) يومية أو أسبوعية أو شهرية أو سنوية.</label>
+        <label><input type="radio" name="q43" value="b"> ب) سنوية فقط.</label>
+        <label><input type="radio" name="q43" value="c"> ج) مرة واحدة في عمر المنظمة.</label>
+        <label><input type="radio" name="q43" value="d"> د) غير مرتبطة بالزمن.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>44- من الآثار الإيجابية لنظام معلومات إداري جيّد على التكاليف التشغيلية:</h3>
+      <div class="options">
+        <label><input type="radio" name="q44" value="a"> أ) زيادة الأخطاء وتكرار العمل.</label>
+        <label><input type="radio" name="q44" value="b"> ب) تقليل التكاليف من خلال تحسين الكفاءة وتقليل الهدر.</label>
+        <label><input type="radio" name="q44" value="c"> ج) زيادة الوقت اللازم لإنجاز المعاملات.</label>
+        <label><input type="radio" name="q44" value="d"> د) زيادة الاعتماد على الورق.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>45- مدير نظم المعلومات في المنظمة يقوم بـ:</h3>
+      <div class="options">
+        <label><input type="radio" name="q45" value="a"> أ) إدارة وتخطيط وتشغيل نظم المعلومات ودعم المستخدمين.</label>
+        <label><input type="radio" name="q45" value="b"> ب) بيع المنتجات للعملاء.</label>
+        <label><input type="radio" name="q45" value="c"> ج) إعداد الطعام للموظفين.</label>
+        <label><input type="radio" name="q45" value="d"> د) أعمال الصيانة الكهربائية فقط.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>46- من التحديات عند تطبيق نظم المعلومات الإدارية:</h3>
+      <div class="options">
+        <label><input type="radio" name="q46" value="a"> أ) مقاومة التغيير من الموظفين.</label>
+        <label><input type="radio" name="q46" value="b"> ب) التكلفة المرتفعة.</label>
+        <label><input type="radio" name="q46" value="c"> ج) الحاجة إلى تدريب المستخدمين.</label>
+        <label><input type="radio" name="q46" value="d"> د) جميع ما سبق.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>47- تصميم واجهة النظام (الشاشات والتقارير) يؤثر على:</h3>
+      <div class="options">
+        <label><input type="radio" name="q47" value="a"> أ) كفاءة استخدام النظام وسهولة التعامل معه.</label>
+        <label><input type="radio" name="q47" value="b"> ب) لون المبنى الخارجي.</label>
+        <label><input type="radio" name="q47" value="c"> ج) عدد الموظفين في الشركة.</label>
+        <label><input type="radio" name="q47" value="d"> د) لا يؤثر في شيء.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>48- القرارات شبه المهيكلة غالباً ما تُدعم من خلال:</h3>
+      <div class="options">
+        <label><input type="radio" name="q48" value="a"> أ) نظم دعم القرار (DSS).</label>
+        <label><input type="radio" name="q48" value="b"> ب) نظم تشغيل الآلات.</label>
+        <label><input type="radio" name="q48" value="c"> ج) الحاسبة اليدوية.</label>
+        <label><input type="radio" name="q48" value="d"> د) لا تحتاج إلى معلومات.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>49- من آثار نظم المعلومات الإدارية على اتخاذ القرار:</h3>
+      <div class="options">
+        <label><input type="radio" name="q49" value="a"> أ) تقليل سرعة القرار.</label>
+        <label><input type="radio" name="q49" value="b"> ب) تحسين سرعة ودقة القرار.</label>
+        <label><input type="radio" name="q49" value="c"> ج) إلغاء الحاجة للقرار.</label>
+        <label><input type="radio" name="q49" value="d"> د) زيادة الغموض في البيانات.</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>50- أي العبارات التالية الأقرب لوصف مستقبل نظم المعلومات الإدارية؟</h3>
+      <div class="options">
+        <label><input type="radio" name="q50" value="a"> أ) ستتوقف عن التطور قريباً.</label>
+        <label><input type="radio" name="q50" value="b"> ب) ستزداد أهمية مع تطور الحوسبة السحابية والذكاء الاصطناعي والبيانات الضخمة.</label>
+        <label><input type="radio" name="q50" value="c"> ج) ستُستخدم في الألعاب فقط.</label>
+        <label><input type="radio" name="q50" value="d"> د) لن يكون لها أي دور في الإدارة.</label>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="button" onclick="gradeQuiz()">تصحيح الإجابات</button>
+      <div id="result" class="result"></div>
+    </div>
+
+    <div class="footer">
+      مراجعة للفصل الأول والثاني - أساسيات نظم المعلومات الإدارية
+    </div>
+  </div>
+
+  <script>
+    function gradeQuiz() {
+      const correctAnswers = {
+        q1: "b",
+        q2: "b",
+        q3: "b",
+        q4: "b",
+        q5: "b",
+        q6: "b",
+        q7: "a",
+        q8: "c",
+        q9: "b",
+        q10: "b",
+        q11: "c",
+        q12: "b",
+        q13: "b",
+        q14: "b",
+        q15: "b",
+        q16: "b",
+        q17: "a",
+        q18: "b",
+        q19: "b",
+        q20: "b",
+        q21: "a",
+        q22: "b",
+        q23: "b",
+        q24: "d",
+        q25: "b",
+        q26: "b",
+        q27: "a",
+        q28: "a",
+        q29: "a",
+        q30: "b",
+        q31: "b",
+        q32: "a",
+        q33: "a",
+        q34: "a",
+        q35: "b",
+        q36: "b",
+        q37: "b",
+        q38: "b",
+        q39: "b",
+        q40: "b",
+        q41: "b",
+        q42: "b",
+        q43: "a",
+        q44: "b",
+        q45: "a",
+        q46: "d",
+        q47: "a",
+        q48: "a",
+        q49: "b",
+        q50: "b"
+      };
+
+      let score = 0;
+      let total = 50;
+
+      // إزالة تلوين سابق
+      const questionDivs = document.querySelectorAll(".question");
+      questionDivs.forEach(div => {
+        div.classList.remove("correct", "wrong");
+      });
+
+      for (let i = 1; i <= total; i++) {
+        const qName = "q" + i;
+        const selected = document.querySelector('input[name="' + qName + '"]:checked');
+        const qDiv = document.querySelector('.question:nth-of-type(' + i + ')');
+
+        if (!selected) {
+          // لم يتم اختيار إجابة
+          if (qDiv) qDiv.classList.add("wrong");
+          continue;
+        }
+
+        if (selected.value === correctAnswers[qName]) {
+          score++;
+          if (qDiv) qDiv.classList.add("correct");
+        } else {
+          if (qDiv) qDiv.classList.add("wrong");
+        }
+      }
+
+      const result = document.getElementById("result");
+      result.textContent = "نتيجتك: " + score + " من " + total + " (" + Math.round((score / total) * 100) + "%)";
+    }
+  </script>
+</body>
+</html>
